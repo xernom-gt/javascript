@@ -1,0 +1,45 @@
+.light-bulb{
+    width: 100px;
+    height: 200px;
+    position: relative;
+    margin: 50px auto;
+}
+
+body{
+    background-color: grey;
+}
+
+.bulb{
+    border-radius: 50px ;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.fillament{
+    top: 50px;
+    left: 49px;
+    width: 2px ;
+    height: 30px ;
+    background-color: #fff;
+    position: absolute;
+    
+}
+
+.base{
+    width: 30px;
+    height: 60px;
+    background-color: #ccc;
+    position: absolute;
+    top: 100px;
+    left: 35px;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.light-bulb.on .bulb{
+    background-color: rgba(255, 255, 0, 0.8);
+    box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.5);
+}
