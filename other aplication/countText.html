@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Hitung Kata</title></head>
+<body>
+  <h1>Hitung Kata</h1>
+  <textarea id="paragraf" rows="4" cols="30" placeholder="Tulis teks..."></textarea><br>
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const teks = document.getElementById("paragraf").value.trim();
+      const kata = teks ? teks.split(/\s+/).length : 0;
+      document.getElementById("hasil").textContent = "Jumlah kata: " + kata;
+    }
+  </script>
+</body>
+</html>
