@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cek Umur</title>
+</head>
+<body>
+  <h1>Cek Umur</h1>
+  <input type="date" id="birth">
+  <button onclick="cekUmur()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cekUmur() {
+      const birth = new Date(document.getElementById("birth").value);
+      const today = new Date();
+      let umur = today.getFullYear() - birth.getFullYear();
+      if (
+        today.getMonth() < birth.getMonth() || 
+        (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate())
+      ) {
+        umur--;
+      }
+      document.getElementById("hasil").textContent = "Umur kamu: " + umur + " tahun";
+    }
+  </script>
+</body>
+</html>
