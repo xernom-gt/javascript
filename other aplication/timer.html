@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Timer</title>
+</head>
+<body>
+  <h1>Timer Mundur</h1>
+  <input type="number" id="seconds" placeholder="Detik" />
+  <button onclick="startCountdown()">Mulai</button>
+  <p id="timer">Siap...</p>
+
+  <script>
+    let countdown;
+
+    function startCountdown() {
+      let time = parseInt(document.getElementById("seconds").value);
+      clearInterval(countdown);
+      countdown = setInterval(() => {
+        document.getElementById("timer").textContent = time + " detik";
+        time--;
+        if (time < 0) {
+          clearInterval(countdown);
+          document.getElementById("timer").textContent = "Waktu habis!";
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
