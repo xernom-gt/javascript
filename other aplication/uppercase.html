@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Huruf Besar</title></head>
+<body>
+  <h1>Konversi ke Huruf Besar</h1>
+  <input type="text" id="teks" placeholder="Masukkan teks">
+  <button onclick="besar()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function besar() {
+      const teks = document.getElementById("teks").value;
+      document.getElementById("hasil").textContent = teks.toUpperCase();
+    }
+  </script>
+</body>
+</html>
