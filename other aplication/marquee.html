@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Marquee</title></head>
+<body>
+  <h1>Marquee Manual</h1>
+  <div id="marquee"></div>
+
+  <script>
+    let text = ">>> Teks berjalan keren bro <<< ";
+    let i = 0;
+    setInterval(() => {
+      document.getElementById("marquee").textContent = text.slice(i) + text.slice(0, i);
+      i = (i + 1) % text.length;
+    }, 200);
+  </script>
+</body>
+</html>
