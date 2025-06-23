@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Hitung Vokal</title></head>
+<body>
+  <h1>Hitung Jumlah Vokal</h1>
+  <input type="text" id="teks" placeholder="Masukkan teks">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const teks = document.getElementById("teks").value.toLowerCase();
+      const vokal = teks.match(/[aeiou]/g);
+      document.getElementById("hasil").textContent = "Jumlah vokal: " + (vokal ? vokal.length : 0);
+    }
+  </script>
+</body>
+</html>
