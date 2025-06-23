@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Filter</title>
+</head>
+<body>
+  <h1>Filter List</h1>
+  <input type="text" onkeyup="filterList()" id="search" placeholder="Cari nama...">
+  <ul id="names">
+    <li>Andi</li>
+    <li>Budi</li>
+    <li>Charlie</li>
+    <li>Dodi</li>
+  </ul>
+
+  <script>
+    function filterList() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const items = document.querySelectorAll("#names li");
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(input) ? "" : "none";
+      });
+    }
+  </script>
+</body>
+</html>
