@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tebak Angka</title>
+</head>
+<body>
+  <h1>Tebak Angka (1-10)</h1>
+  <input type="number" id="guess" placeholder="Tebakan...">
+  <button onclick="check()">Cek</button>
+  <p id="result"></p>
+
+  <script>
+    const secret = Math.floor(Math.random() * 10) + 1;
+
+    function check() {
+      const guess = parseInt(document.getElementById("guess").value);
+      const res = document.getElementById("result");
+
+      if (guess === secret) {
+        res.textContent = "Benar!";
+      } else {
+        res.textContent = "Salah, coba lagi!";
+      }
+    }
+  </script>
+</body>
+</html>
