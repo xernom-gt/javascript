@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Desimal ke Biner</title></head>
+<body>
+  <h1>Konversi ke Biner</h1>
+  <input type="number" id="angka" placeholder="Angka desimal">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const n = parseInt(document.getElementById("angka").value);
+      document.getElementById("hasil").textContent = n.toString(2);
+    }
+  </script>
+</body>
+</html>
