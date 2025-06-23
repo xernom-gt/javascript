@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text to Speech</title>
+</head>
+<body>
+  <h1>Text to Speech</h1>
+  <textarea id="text" rows="4" cols="30" placeholder="Ketik sesuatu..."></textarea><br>
+  <button onclick="speak()">Ucapkan</button>
+
+  <script>
+    function speak() {
+      const msg = new SpeechSynthesisUtterance(document.getElementById("text").value);
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
+</body>
+</html>
