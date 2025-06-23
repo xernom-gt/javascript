@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pembalik Teks</title></head>
+<body>
+  <h1>Pembalik Teks</h1>
+  <input type="text" id="teks" placeholder="Teks...">
+  <button onclick="balik()">Balik</button>
+  <p id="hasil"></p>
+
+  <script>
+    function balik() {
+      const teks = document.getElementById("teks").value;
+      document.getElementById("hasil").textContent = teks.split("").reverse().join("");
+    }
+  </script>
+</body>
+</html>
