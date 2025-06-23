@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cek Bilangan Prima</title></head>
+<body>
+  <h1>Cek Bilangan Prima</h1>
+  <input type="number" id="angka" placeholder="Angka">
+  <button onclick="cek()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cek() {
+      const n = parseInt(document.getElementById("angka").value);
+      if (n < 2) return document.getElementById("hasil").textContent = "Bukan prima";
+
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+          return document.getElementById("hasil").textContent = "Bukan prima";
+        }
+      }
+      document.getElementById("hasil").textContent = "Prima!";
+    }
+  </script>
+</body>
+</html>
