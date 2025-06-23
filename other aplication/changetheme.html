@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Mode</title>
+</head>
+<body>
+  <h1>Dark Mode Toggle</h1>
+  <button onclick="toggleMode()">Ganti Tema</button>
+
+  <script>
+    let dark = false;
+    function toggleMode() {
+      dark = !dark;
+      document.body.style.backgroundColor = dark ? "#111" : "#fff";
+      document.body.style.color = dark ? "#fff" : "#000";
+    }
+  </script>
+</body>
+</html>
