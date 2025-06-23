@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Segitiga Bintang</title></head>
+<body>
+  <h1>Segitiga Bintang</h1>
+  <input type="number" id="tinggi" placeholder="Tinggi segitiga">
+  <button onclick="buatSegitiga()">Buat</button>
+  <pre id="hasil"></pre>
+
+  <script>
+    function buatSegitiga() {
+      const tinggi = parseInt(document.getElementById("tinggi").value);
+      let hasil = "";
+      for (let i = 1; i <= tinggi; i++) {
+        hasil += "*".repeat(i) + "\n";
+      }
+      document.getElementById("hasil").textContent = hasil;
+    }
+  </script>
+</body>
+</html>
