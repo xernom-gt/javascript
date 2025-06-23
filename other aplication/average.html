@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Rata-Rata</title></head>
+<body>
+  <h1>Rata-Rata</h1>
+  <input type="text" id="angka" placeholder="Pisahkan dengan koma">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const arr = document.getElementById("angka").value.split(",").map(Number);
+      const total = arr.reduce((a,b) => a+b, 0);
+      const rata = total / arr.length;
+      document.getElementById("hasil").textContent = "Rata-rata: " + rata.toFixed(2);
+    }
+  </script>
+</body>
+</html>
