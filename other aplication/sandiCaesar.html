@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sandi Caesar</title></head>
+<body>
+  <h1>Enkripsi Caesar</h1>
+  <input type="text" id="teks" placeholder="Teks...">
+  <input type="number" id="geser" placeholder="Shift...">
+  <button onclick="enkripsi()">Enkripsi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function enkripsi() {
+      const teks = document.getElementById("teks").value.toLowerCase();
+      const shift = parseInt(document.getElementById("geser").value);
+      let hasil = "";
+      for (let i = 0; i < teks.length; i++) {
+        const c = teks[i];
+        if (c >= "a" && c <= "z") {
+          let code = teks.charCodeAt(i) + shift;
+          if (code > 122) code -= 26;
+          if (code < 97) code += 26;
+          hasil += String.fromCharCode(code);
+        } else {
+          hasil += c;
+        }
+      }
+      document.getElementById("hasil").textContent = hasil;
+    }
+  </script>
+</body>
+</html>
