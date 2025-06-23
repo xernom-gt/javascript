@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dadu</title></head>
+<body>
+  <h1>Lempar Dadu</h1>
+  <button onclick="lempar()">Lempar</button>
+  <p id="hasil"></p>
+
+  <script>
+    function lempar() {
+      const hasil = Math.floor(Math.random() * 6) + 1;
+      document.getElementById("hasil").textContent = "Hasil: " + hasil;
+    }
+  </script>
+</body>
+</html>
