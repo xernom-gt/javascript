@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Catatan Harian</title>
+</head>
+<body>
+  <h1>Catatan Harian</h1>
+  <textarea id="note" rows="6" cols="30" placeholder="Tulis catatan..."></textarea><br>
+  <button onclick="simpan()">Simpan</button>
+  <button onclick="hapus()">Hapus</button>
+
+  <script>
+    document.getElementById("note").value = localStorage.getItem("catatan") || "";
+
+    function simpan() {
+      localStorage.setItem("catatan", document.getElementById("note").value);
+      alert("Catatan disimpan!");
+    }
+
+    function hapus() {
+      localStorage.removeItem("catatan");
+      document.getElementById("note").value = "";
+    }
+  </script>
+</body>
+</html>
