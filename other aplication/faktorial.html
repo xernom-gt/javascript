@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Faktorial</title></head>
+<body>
+  <h1>Faktorial</h1>
+  <input type="number" id="angka" placeholder="Angka">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      let n = parseInt(document.getElementById("angka").value);
+      let hasil = 1;
+      for (let i = 2; i <= n; i++) {
+        hasil *= i;
+      }
+      document.getElementById("hasil").textContent = `${n}! = ${hasil}`;
+    }
+  </script>
+</body>
+</html>
