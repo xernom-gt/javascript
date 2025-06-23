@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pangkat</title></head>
+<body>
+  <h1>Pangkat</h1>
+  <input type="number" id="a" placeholder="Angka">
+  <input type="number" id="b" placeholder="Pangkat">
+  <button onclick="pangkat()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function pangkat() {
+      const a = parseFloat(document.getElementById("a").value);
+      const b = parseFloat(document.getElementById("b").value);
+      document.getElementById("hasil").textContent = a + "^" + b + " = " + a ** b;
+    }
+  </script>
+</body>
+</html>
