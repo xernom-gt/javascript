@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cek Palindrom</title></head>
+<body>
+  <h1>Cek Palindrom</h1>
+  <input type="text" id="kata" placeholder="Masukkan kata">
+  <button onclick="cek()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cek() {
+      const teks = document.getElementById("kata").value.toLowerCase();
+      const balik = teks.split("").reverse().join("");
+      document.getElementById("hasil").textContent = teks === balik ? "Palindrom!" : "Bukan Palindrom.";
+    }
+  </script>
+</body>
+</html>
