@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kuis Pilihan Ganda</title>
+</head>
+<body>
+  <h1>Kuis: Ibukota Indonesia?</h1>
+  <button onclick="check('Jakarta')">Jakarta</button>
+  <button onclick="check('Bandung')">Bandung</button>
+  <button onclick="check('Surabaya')">Surabaya</button>
+  <p id="result"></p>
+
+  <script>
+    function check(answer) {
+      const correct = "Jakarta";
+      document.getElementById("result").textContent = 
+        answer === correct ? "Benar!" : "Salah!";
+    }
+  </script>
+</body>
+</html>
