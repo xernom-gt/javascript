@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ke Romawi</title></head>
+<body>
+  <h1>Angka ke Romawi</h1>
+  <input type="number" id="angka" placeholder="Angka (1–3999)">
+  <button onclick="romawi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function romawi() {
+      const angka = parseInt(document.getElementById("angka").value);
+      const map = [
+        [1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'],
+        [100, 'C'], [90, 'XC'], [50, 'L'], [40, 'XL'],
+        [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']
+      ];
+      let result = "", num = angka;
+      for (let [val, sym] of map) {
+        while (num >= val) {
+          result += sym;
+          num -= val;
+        }
+      }
+      document.getElementById("hasil").textContent = result || "Invalid!";
+    }
+  </script>
+</body>
+</html>
