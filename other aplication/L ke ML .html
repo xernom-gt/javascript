@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Liter ke mL</title></head>
+<body>
+  <h1>Konversi Liter ke mL</h1>
+  <input type="number" id="liter" placeholder="Masukkan liter">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const liter = parseFloat(document.getElementById("liter").value);
+      document.getElementById("hasil").textContent = `${liter} L = ${liter * 1000} mL`;
+    }
+  </script>
+</body>
+</html>
