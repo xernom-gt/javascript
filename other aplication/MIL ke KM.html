@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Mil ke KM</title></head>
+<body>
+  <h1>Konversi Mil ke Kilometer</h1>
+  <input type="number" id="mil" placeholder="Masukkan mil">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const mil = parseFloat(document.getElementById("mil").value);
+      const km = mil * 1.60934;
+      document.getElementById("hasil").textContent = `${mil} mil = ${km.toFixed(2)} km`;
+    }
+  </script>
+</body>
+</html>
