@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Luas Permukaan Kubus</title></head>
+<body>
+  <h1>Luas Permukaan Kubus</h1>
+  <input type="number" id="sisi" placeholder="Sisi (cm)">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const s = parseFloat(document.getElementById("sisi").value);
+      document.getElementById("hasil").textContent = `Luas permukaan: ${6 * s * s} cm²`;
+    }
+  </script>
+</body>
+</html>
