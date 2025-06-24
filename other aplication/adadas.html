@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Bagi Uang</title></head>
+<body>
+  <h1>Bagi Uang Rata</h1>
+  <input type="number" id="uang" placeholder="Total uang (Rp)">
+  <input type="number" id="orang" placeholder="Jumlah orang">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const total = parseFloat(document.getElementById("uang").value);
+      const orang = parseInt(document.getElementById("orang").value);
+      const hasil = total / orang;
+      document.getElementById("hasil").textContent = `Setiap orang dapat: Rp ${hasil.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
