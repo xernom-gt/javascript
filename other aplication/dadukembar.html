@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dadu Kembar</title></head>
+<body>
+  <h1>Lempar 2 Dadu</h1>
+  <button onclick="lempar()">Lempar!</button>
+  <p id="hasil"></p>
+
+  <script>
+    function lempar() {
+      const d1 = Math.floor(Math.random() * 6) + 1;
+      const d2 = Math.floor(Math.random() * 6) + 1;
+      const hasil = (d1 === d2) ? "Dadu Kembar!" : "Beda!";
+      document.getElementById("hasil").textContent = `Dadu 1: ${d1}, Dadu 2: ${d2} => ${hasil}`;
+    }
+  </script>
+</body>
+</html>
