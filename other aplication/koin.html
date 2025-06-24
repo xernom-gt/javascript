@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Koin</title></head>
+<body>
+  <h1>Flip Koin</h1>
+  <button onclick="flip()">Lempar!</button>
+  <p id="hasil"></p>
+
+  <script>
+    function flip() {
+      const hasil = Math.random() < 0.5 ? "Heads" : "Tails";
+      document.getElementById("hasil").textContent = hasil;
+    }
+  </script>
+</body>
+</html>
