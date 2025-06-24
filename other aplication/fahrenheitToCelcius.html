@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Fahrenheit ke Celsius</title></head>
+<body>
+  <h1>Konversi Suhu</h1>
+  <input type="number" id="f" placeholder="Suhu (°F)">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const f = parseFloat(document.getElementById("f").value);
+      const c = (f - 32) * 5 / 9;
+      document.getElementById("hasil").textContent = "Celsius: " + c.toFixed(2);
+    }
+  </script>
+</body>
+</html>
