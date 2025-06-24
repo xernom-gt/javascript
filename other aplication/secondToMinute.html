@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Detik ke Menit</title></head>
+<body>
+  <h1>Konversi Detik</h1>
+  <input type="number" id="detik" placeholder="Jumlah detik">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const d = parseInt(document.getElementById("detik").value);
+      const m = Math.floor(d / 60);
+      const s = d % 60;
+      document.getElementById("hasil").textContent = `${m} menit ${s} detik`;
+    }
+  </script>
+</body>
+</html>
