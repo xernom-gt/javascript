@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pajak</title></head>
+<body>
+  <h1>Kalkulator Pajak</h1>
+  <input type="number" id="gaji" placeholder="Gaji (Rp)">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const gaji = parseFloat(document.getElementById("gaji").value);
+      const pajak = gaji * 0.1;
+      document.getElementById("hasil").textContent = "Pajak: Rp " + pajak.toFixed(2);
+    }
+  </script>
+</body>
+</html>
