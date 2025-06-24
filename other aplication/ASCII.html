@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>ASCII</title></head>
+<body>
+  <h1>Huruf ke ASCII</h1>
+  <input type="text" id="huruf" maxlength="1" placeholder="Masukkan 1 huruf">
+  <button onclick="konversi()">Lihat ASCII</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const huruf = document.getElementById("huruf").value;
+      document.getElementById("hasil").textContent = huruf.charCodeAt(0);
+    }
+  </script>
+</body>
+</html>
