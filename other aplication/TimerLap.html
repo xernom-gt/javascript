@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>Stopwatch</title></head>
+<body>
+  <h1>Stopwatch</h1>
+  <button onclick="mulai()">Mulai</button>
+  <button onclick="berhenti()">Berhenti</button>
+  <button onclick="lap()">Lap</button>
+  <p id="waktu">0.00 detik</p>
+  <ul id="laplist"></ul>
+
+  <script>
+    let timer, waktu = 0;
+
+    function mulai() {
+      if (!timer) {
+        timer = setInterval(() => {
+          waktu += 0.1;
+          document.getElementById("waktu").textContent = waktu.toFixed(2) + " detik";
+        }, 100);
+      }
+    }
+
+    function berhenti() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    function lap() {
+      const li = document.createElement("li");
+      li.textContent = waktu.toFixed(2) + " detik";
+      document.getElementById("laplist").appendChild(li);
+    }
+  </script>
+</body>
+</html>
