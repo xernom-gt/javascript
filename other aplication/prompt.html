@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Hari Ini</title></head>
+<body>
+  <h1>Info Hari Ini</h1>
+  <button onclick="tampil()">Tampilkan</button>
+  <p id="hasil"></p>
+
+  <script>
+    function tampil() {
+      const nama = prompt("Masukkan namamu:");
+      const today = new Date();
+      document.getElementById("hasil").textContent = `Halo, ${nama}! Hari ini ${today.toDateString()}`;
+    }
+  </script>
+</body>
+</html>
