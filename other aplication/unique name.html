@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Nama Unik</title></head>
+<body>
+  <h1>Nama Unik Generator</h1>
+  <button onclick="generate()">Buat Nama</button>
+  <p id="hasil"></p>
+
+  <script>
+    const awalan = ["Dark", "Fire", "Ice", "Shadow", "Mega"];
+    const akhiran = ["Slayer", "Wizard", "Hunter", "Blade", "Knight"];
+
+    function generate() {
+      const a = awalan[Math.floor(Math.random() * awalan.length)];
+      const b = akhiran[Math.floor(Math.random() * akhiran.length)];
+      document.getElementById("hasil").textContent = a + b;
+    }
+  </script>
+</body>
+</html>
