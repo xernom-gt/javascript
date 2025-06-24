@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Score Game</title></head>
+<body>
+  <h1>Skor Tim</h1>
+  <p>Tim A: <span id="a">0</span></p>
+  <p>Tim B: <span id="b">0</span></p>
+  <button onclick="tambah('a')">+1 Tim A</button>
+  <button onclick="tambah('b')">+1 Tim B</button>
+
+  <script>
+    let skorA = 0, skorB = 0;
+    function tambah(tim) {
+      if (tim === "a") skorA++;
+      else skorB++;
+      document.getElementById("a").textContent = skorA;
+      document.getElementById("b").textContent = skorB;
+    }
+  </script>
+</body>
+</html>
