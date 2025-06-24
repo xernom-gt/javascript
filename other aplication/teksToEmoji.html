@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Kalimat ke Emoji</title></head>
+<body>
+  <h1>Kalimat ke Emoji</h1>
+  <input type="text" id="input" placeholder="Contoh: aku suka kucing">
+  <button onclick="ubah()">Ubah</button>
+  <p id="hasil"></p>
+
+  <script>
+    function ubah() {
+      const kata = document.getElementById("input").value.toLowerCase();
+      const emoji = kata.replace("kucing", "🐱").replace("anjing", "🐶").replace("makan", "🍽").replace("suka", "❤");
+      document.getElementById("hasil").textContent = emoji;
+    }
+  </script>
+</body>
+</html>
