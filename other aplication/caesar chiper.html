@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Caesar Cipher</title></head>
+<body>
+  <h1>Caesar Cipher</h1>
+  <input type="text" id="teks" placeholder="Teks asli">
+  <input type="number" id="shift" placeholder="Shift (angka)">
+  <button onclick="encrypt()">Enkripsi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function encrypt() {
+      const teks = document.getElementById("teks").value.toUpperCase();
+      const shift = parseInt(document.getElementById("shift").value);
+      let hasil = "";
+
+      for (let i = 0; i < teks.length; i++) {
+        let kode = teks.charCodeAt(i);
+        if (kode >= 65 && kode <= 90) {
+          kode = ((kode - 65 + shift) % 26) + 65;
+        }
+        hasil += String.fromCharCode(kode);
+      }
+
+      document.getElementById("hasil").textContent = "Hasil enkripsi: " + hasil;
+    }
+  </script>
+</body>
+</html>
