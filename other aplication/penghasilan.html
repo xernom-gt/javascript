@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Kalkulator Zakat</title></head>
+<body>
+  <h1>Zakat Penghasilan</h1>
+  <input type="number" id="penghasilan" placeholder="Penghasilan/bulan">
+  <button onclick="hitung()">Hitung Zakat</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const p = parseFloat(document.getElementById("penghasilan").value);
+      const zakat = p * 0.025;
+      document.getElementById("hasil").textContent = "Zakat: Rp " + zakat.toFixed(2);
+    }
+  </script>
+</body>
+</html>
