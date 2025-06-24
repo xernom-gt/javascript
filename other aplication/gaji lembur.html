@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Gaji Lembur</title></head>
+<body>
+  <h1>Kalkulator Gaji</h1>
+  <input type="number" id="gaji" placeholder="Gaji per jam">
+  <input type="number" id="jam" placeholder="Total jam kerja">
+  <button onclick="hitung()">Hitung Total</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const gaji = parseFloat(document.getElementById("gaji").value);
+      const jam = parseFloat(document.getElementById("jam").value);
+      const normal = Math.min(8, jam) * gaji;
+      const lembur = Math.max(0, jam - 8) * gaji * 1.5;
+      document.getElementById("hasil").textContent = "Total: Rp " + (normal + lembur).toFixed(2);
+    }
+  </script>
+</body>
+</html>
