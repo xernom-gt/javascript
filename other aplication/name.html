@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Nama Acak</title></head>
+<body>
+  <h1>Pilih Nama Acak</h1>
+  <button onclick="acak()">Pilih</button>
+  <p id="hasil"></p>
+
+  <script>
+    const nama = ["Andi", "Budi", "Citra", "Dina", "Eka", "Fajar"];
+    function acak() {
+      const index = Math.floor(Math.random() * nama.length);
+      document.getElementById("hasil").textContent = "Nama: " + nama[index];
+    }
+  </script>
+</body>
+</html>
