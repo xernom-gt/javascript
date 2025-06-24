@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><title>Alarm</title></head>
+<body>
+  <h1>Alarm Sederhana</h1>
+  <input type="time" id="alarm">
+  <button onclick="setAlarm()">Set Alarm</button>
+  <p id="info"></p>
+
+  <script>
+    let alarmWaktu = null;
+
+    function setAlarm() {
+      const waktu = document.getElementById("alarm").value;
+      if (!waktu) return alert("Masukkan waktu!");
+      alarmWaktu = waktu;
+      document.getElementById("info").textContent = "Alarm diset untuk " + waktu;
+    }
+
+    setInterval(() => {
+      const now = new Date();
+      const jam = now.getHours().toString().padStart(2, "0");
+      const menit = now.getMinutes().toString().padStart(2, "0");
+      const sekarang = jam + ":" + menit;
+      if (sekarang === alarmWaktu) {
+        alert("⏰ Waktunya alarm!");
+        alarmWaktu = null;
+        document.getElementById("info").textContent = "";
+      }
+    }, 10000);
+  </script>
+</body>
+</html>
