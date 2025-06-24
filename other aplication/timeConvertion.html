@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Konversi Jam</title></head>
+<body>
+  <h1>Konversi Detik</h1>
+  <input type="number" id="d" placeholder="Detik total">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const d = parseInt(document.getElementById("d").value);
+      const jam = Math.floor(d / 3600);
+      const menit = Math.floor((d % 3600) / 60);
+      const detik = d % 60;
+      document.getElementById("hasil").textContent = ` ${jam} jam :${menit} menit :${detik} detik`;
+    }
+  </script>
+</body>
+</html>
