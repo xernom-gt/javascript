@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>Tebak Warna</title></head>
+<body>
+  <h1>Tebak Warna</h1>
+  <p id="target"></p>
+  <button onclick="cek('merah')">Merah</button>
+  <button onclick="cek('biru')">Biru</button>
+  <button onclick="cek('hijau')">Hijau</button>
+  <p id="hasil"></p>
+
+  <script>
+    const warna = ['merah', 'biru', 'hijau'];
+    let jawaban = '';
+
+    function acak() {
+      jawaban = warna[Math.floor(Math.random() * warna.length)];
+      document.getElementById("target").textContent = `Warna yang harus dipilih: ${jawaban}`;
+    }
+
+    function cek(pilihan) {
+      const msg = (pilihan === jawaban) ? "Benar!" : "Salah!";
+      document.getElementById("hasil").textContent = msg;
+      acak();
+    }
+
+    acak();
+  </script>
+</body>
+</html>
