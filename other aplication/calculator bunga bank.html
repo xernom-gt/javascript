@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Bunga Sederhana</title></head>
+<body>
+  <h1>Bunga Sederhana</h1>
+  <input type="number" id="p" placeholder="Pokok (Rp)">
+  <input type="number" id="r" placeholder="Bunga (%)">
+  <input type="number" id="t" placeholder="Tahun">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const p = parseFloat(document.getElementById("p").value);
+      const r = parseFloat(document.getElementById("r").value);
+      const t = parseFloat(document.getElementById("t").value);
+      const bunga = (p * r * t) / 100;
+      document.getElementById("hasil").textContent = "Bunga: Rp " + bunga.toFixed(2);
+    }
+  </script>
+</body>
+</html>
