@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Umur Tahun</title></head>
+<body>
+  <h1>Hitung Umur</h1>
+  <input type="date" id="tgl">
+  <button onclick="umur()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function umur() {
+      const lahir = new Date(document.getElementById("tgl").value);
+      const hariIni = new Date();
+      let umur = hariIni.getFullYear() - lahir.getFullYear();
+      document.getElementById("hasil").textContent = "Umur: " + umur + " tahun";
+    }
+  </script>
+</body>
+</html>
