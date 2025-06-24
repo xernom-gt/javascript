@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Biner ke Desimal</title></head>
+<body>
+  <h1>Biner ke Desimal</h1>
+  <input type="text" id="biner" placeholder="Contoh: 1010">
+  <button onclick="konversi()">Konversi</button>
+  <p id="hasil"></p>
+
+  <script>
+    function konversi() {
+      const biner = document.getElementById("biner").value;
+      const desimal = parseInt(biner, 2);
+      document.getElementById("hasil").textContent = "Desimal: " + desimal;
+    }
+  </script>
+</body>
+</html>
