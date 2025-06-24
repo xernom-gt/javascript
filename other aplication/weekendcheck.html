@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Weekend Check</title></head>
+<body>
+  <h1>Cek Hari Ini</h1>
+  <button onclick="cek()">Cek Hari</button>
+  <p id="hasil"></p>
+
+  <script>
+    function cek() {
+      const hari = new Date().getDay();
+      const hasil = (hari === 0 || hari === 6) ? "Weekend!" : "Weekday!";
+      document.getElementById("hasil").textContent = hasil;
+    }
+  </script>
+</body>
+</html>
