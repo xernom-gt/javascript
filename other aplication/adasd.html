@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>KPK</title></head>
+<body>
+  <h1>KPK 2 Bilangan</h1>
+  <input type="number" id="a" placeholder="Angka 1">
+  <input type="number" id="b" placeholder="Angka 2">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function gcd(x, y) {
+      return y === 0 ? x : gcd(y, x % y);
+    }
+    function hitung() {
+      const a = parseInt(document.getElementById("a").value);
+      const b = parseInt(document.getElementById("b").value);
+      const kpk = (a * b) / gcd(a, b);
+      document.getElementById("hasil").textContent = `KPK: ${kpk}`;
+    }
+  </script>
+</body>
+</html>
