@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>FPB</title></head>
+<body>
+  <h1>FPB 2 Bilangan</h1>
+  <input type="number" id="x" placeholder="Angka 1">
+  <input type="number" id="y" placeholder="Angka 2">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      let a = parseInt(document.getElementById("x").value);
+      let b = parseInt(document.getElementById("y").value);
+      while (b !== 0) {
+        const temp = b;
+        b = a % b;
+        a = temp;
+      }
+      document.getElementById("hasil").textContent = `FPB: ${a}`;
+    }
+  </script>
+</body>
+</html>
