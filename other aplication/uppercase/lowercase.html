@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Huruf Besar Kecil</title></head>
+<body>
+  <h1>Ubah Huruf</h1>
+  <input type="text" id="teks" placeholder="Masukkan teks">
+  <button onclick="toUpper()">Kapital</button>
+  <button onclick="toLower()">Kecil</button>
+  <p id="hasil"></p>
+
+  <script>
+    function toUpper() {
+      document.getElementById("hasil").textContent = document.getElementById("teks").value.toUpperCase();
+    }
+    function toLower() {
+      document.getElementById("hasil").textContent = document.getElementById("teks").value.toLowerCase();
+    }
+  </script>
+</body>
+</html>
