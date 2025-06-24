@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Kartu Nama</title></head>
+<body>
+  <h1>Kartu Nama</h1>
+  <input type="text" id="nama" placeholder="Nama">
+  <input type="text" id="email" placeholder="Email">
+  <input type="text" id="hp" placeholder="No HP">
+  <button onclick="tampil()">Tampilkan</button>
+  <div id="hasil"></div>
+
+  <script>
+    function tampil() {
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const hp = document.getElementById("hp").value;
+
+      document.getElementById("hasil").innerHTML = `
+        <hr>
+        <p><strong>Nama:</strong> ${nama}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>HP:</strong> ${hp}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
