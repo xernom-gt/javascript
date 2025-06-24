@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Jumlah Karakter</title></head>
+<body>
+  <h1>Hitung Karakter</h1>
+  <input type="text" id="teks" placeholder="Tulis sesuatu...">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const teks = document.getElementById("teks").value;
+      document.getElementById("hasil").textContent = "Jumlah karakter: " + teks.length;
+    }
+  </script>
+</body>
+</html>
