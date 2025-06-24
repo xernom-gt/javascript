@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Kalkulator Diskon</title></head>
+<body>
+  <h1>Kalkulator Diskon</h1>
+  <input type="number" id="harga" placeholder="Harga awal">
+  <input type="number" id="diskon" placeholder="Diskon (%)">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const harga = parseFloat(document.getElementById("harga").value);
+      const diskon = parseFloat(document.getElementById("diskon").value);
+      const total = harga - (harga * diskon / 100);
+      document.getElementById("hasil").textContent = "Harga setelah diskon: Rp " + total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
