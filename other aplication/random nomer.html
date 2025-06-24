@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Angka Acak Unik</title></head>
+<body>
+  <h1>Acak Angka Unik</h1>
+  <button onclick="acak()">Acak!</button>
+  <p id="hasil"></p>
+
+  <script>
+    let angka = [...Array(100).keys()].map(x => x + 1);
+    function acak() {
+      if (angka.length === 0) {
+        document.getElementById("hasil").textContent = "Habis!";
+        return;
+      }
+      const idx = Math.floor(Math.random() * angka.length);
+      const ambil = angka.splice(idx, 1)[0];
+      document.getElementById("hasil").textContent = `Angka: ${ambil}`;
+    }
+  </script>
+</body>
+</html>
