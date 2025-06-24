@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Kalkulator BMI</title></head>
+<body>
+  <h1>Hitung BMI</h1>
+  <input type="number" id="berat" placeholder="Berat (kg)">
+  <input type="number" id="tinggi" placeholder="Tinggi (cm)">
+  <button onclick="hitung()">Cek</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const berat = parseFloat(document.getElementById("berat").value);
+      const tinggi = parseFloat(document.getElementById("tinggi").value) / 100;
+      const bmi = berat / (tinggi * tinggi);
+      let kategori = "";
+      if (bmi < 18.5) kategori = "Kurus";
+      else if (bmi < 25) kategori = "Normal";
+      else if (bmi < 30) kategori = "Gemuk";
+      else kategori = "Obesitas";
+      document.getElementById("hasil").textContent = `BMI: ${bmi.toFixed(2)} (${kategori})`;
+    }
+  </script>
+</body>
+</html>
