@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Umur dalam Hari</title></head>
+<body>
+  <h1>Hitung Umur (hari)</h1>
+  <input type="date" id="lahir">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const lahir = new Date(document.getElementById("lahir").value);
+      const hariIni = new Date();
+      const selisih = hariIni - lahir;
+      const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+      document.getElementById("hasil").textContent = `Umur: ${hari} hari`;
+    }
+  </script>
+</body>
+</html>
