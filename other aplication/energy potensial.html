@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Energi Potensial</title></head>
+<body>
+  <h1>Kalkulator Energi Potensial</h1>
+  <input type="number" id="massa" placeholder="Massa (kg)">
+  <input type="number" id="tinggi" placeholder="Tinggi (m)">
+  <button onclick="hitung()">Hitung</button>
+  <p id="hasil"></p>
+
+  <script>
+    function hitung() {
+      const g = 9.8;
+      const m = parseFloat(document.getElementById("massa").value);
+      const h = parseFloat(document.getElementById("tinggi").value);
+      const ep = m * g * h;
+      document.getElementById("hasil").textContent = Energi Potensial: ${ep.toFixed(2)} Joule;
+    }
+  </script>
+</body>
+</html>
